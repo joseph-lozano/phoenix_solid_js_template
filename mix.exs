@@ -55,7 +55,8 @@ defmodule SolidEx.MixProject do
       {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
       {:reverse_proxy_plug, "~> 2.2", only: [:dev]},
       # for reverse_proxy_plug
-      {:httpoison, "~> 2.1", only: [:dev]}
+      {:httpoison, "~> 2.1", only: [:dev]},
+      {:rename_project, "~> 0.1.0", only: :dev}
     ]
   end
 
