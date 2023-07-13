@@ -17,8 +17,8 @@ defmodule SolidExWeb.PageController do
     end
   end
 
-  def api_test(conn, _params) do
-    json(conn, %{message: "Hello from the backend!"})
+  def hello(conn, _params) do
+    text(conn, "Hello from the backend!")
   end
 
   def csrf(conn, _params) do
