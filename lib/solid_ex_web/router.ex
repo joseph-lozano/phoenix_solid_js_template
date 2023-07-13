@@ -14,6 +14,8 @@ defmodule SolidExWeb.Router do
 
   scope "/api", SolidExWeb do
     pipe_through :api
+
+    get "/hello", PageController, :hello
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
