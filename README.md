@@ -17,3 +17,7 @@ When not in dev, you should run `npm run build --prefix assets`.
 This is already done in the `mix test` alias and in the Dockerfile.
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+
+## Renaming your project
+
+Run `mix rename SolidEx YourNewName` to rename your project. You can then remove `{:rename_project, "~> 0.1.0", only: :dev}` from your `mix.exs` file.
