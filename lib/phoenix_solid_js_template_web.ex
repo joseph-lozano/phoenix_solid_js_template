@@ -1,12 +1,12 @@
-defmodule SolidExWeb do
+defmodule PhoenixSolidJSTemplateWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use SolidExWeb, :controller
-      use SolidExWeb, :html
+      use PhoenixSolidJSTemplateWeb, :controller
+      use PhoenixSolidJSTemplateWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -39,7 +39,7 @@ defmodule SolidExWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: SolidExWeb.Layouts]
+        layouts: [html: PhoenixSolidJSTemplateWeb.Layouts]
 
       import Plug.Conn
 
@@ -50,9 +50,9 @@ defmodule SolidExWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: SolidExWeb.Endpoint,
-        router: SolidExWeb.Router,
-        statics: SolidExWeb.static_paths()
+        endpoint: PhoenixSolidJSTemplateWeb.Endpoint,
+        router: PhoenixSolidJSTemplateWeb.Router,
+        statics: PhoenixSolidJSTemplateWeb.static_paths()
     end
   end
 

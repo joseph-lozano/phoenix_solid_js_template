@@ -1,5 +1,5 @@
-defmodule SolidExWeb.PageController do
-  use SolidExWeb, :controller
+defmodule PhoenixSolidJSTemplateWeb.PageController do
+  use PhoenixSolidJSTemplateWeb, :controller
 
   # In prod, we can determine the html at compile time
   # Otherwise, we need to read it from the file system
@@ -11,7 +11,10 @@ defmodule SolidExWeb.PageController do
       """
     end
   else
-    @html :solid_ex |> :code.priv_dir() |> Path.join("static/index.html") |> File.read!()
+    @html :phoenix_solid_js_template
+          |> :code.priv_dir()
+          |> Path.join("static/index.html")
+          |> File.read!()
     def app(conn, _params) do
       html(conn, @html)
     end

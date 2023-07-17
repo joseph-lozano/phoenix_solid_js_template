@@ -1,12 +1,12 @@
-defmodule SolidExWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :solid_ex
+defmodule PhoenixSolidJSTemplateWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :phoenix_solid_js_template
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_solid_ex_key",
+    key: "_phoenix_solid_js_template_key",
     signing_salt: "KPzW4kU7",
     same_site: "Lax"
   ]
@@ -17,14 +17,14 @@ defmodule SolidExWeb.Endpoint do
   unless Mix.env() == :dev do
     plug Plug.Static,
       at: "/",
-      from: :solid_ex
+      from: :phoenix_solid_js_template
   end
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :solid_ex
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :phoenix_solid_js_template
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -42,5 +42,5 @@ defmodule SolidExWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug SolidExWeb.Router
+  plug PhoenixSolidJSTemplateWeb.Router
 end

@@ -7,18 +7,18 @@
 # General application configuration
 import Config
 
-config :solid_ex,
-  ecto_repos: [SolidEx.Repo],
+config :phoenix_solid_js_template,
+  ecto_repos: [PhoenixSolidJSTemplate.Repo],
   generators: [binary_id: true]
 
 # Configures the endpoint
-config :solid_ex, SolidExWeb.Endpoint,
+config :phoenix_solid_js_template, PhoenixSolidJSTemplateWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [json: SolidExWeb.ErrorJSON],
+    formats: [json: PhoenixSolidJSTemplateWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: SolidEx.PubSub,
+  pubsub_server: PhoenixSolidJSTemplate.PubSub,
   live_view: [signing_salt: "6qWHr9V7"]
 
 # Configures the mailer
@@ -28,7 +28,7 @@ config :solid_ex, SolidExWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :solid_ex, SolidEx.Mailer, adapter: Swoosh.Adapters.Local
+config :phoenix_solid_js_template, PhoenixSolidJSTemplate.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configures Elixir's Logger
 config :logger, :console,
