@@ -6,7 +6,7 @@ defmodule PhoenixSolidJSTemplateWeb.Telemetry do
     Supervisor.start_link(__MODULE__, arg, name: __MODULE__)
   end
 
-  @impl Supervisor
+  @impl true
   def init(_arg) do
     children = [
       # Telemetry poller will execute the given period measurements
@@ -43,7 +43,7 @@ defmodule PhoenixSolidJSTemplateWeb.Telemetry do
       summary("phoenix.socket_connected.duration",
         unit: {:native, :millisecond}
       ),
-      summary("phoenix.channel_join.duration",
+      summary("phoenix.channel_joined.duration",
         unit: {:native, :millisecond}
       ),
       summary("phoenix.channel_handled_in.duration",
@@ -52,23 +52,23 @@ defmodule PhoenixSolidJSTemplateWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("phoenix_solid_js_template.repo.query.total_time",
+      summary("phoenix_solidjs_template.repo.query.total_time",
         unit: {:native, :millisecond},
         description: "The sum of the other measurements"
       ),
-      summary("phoenix_solid_js_template.repo.query.decode_time",
+      summary("phoenix_solidjs_template.repo.query.decode_time",
         unit: {:native, :millisecond},
         description: "The time spent decoding the data received from the database"
       ),
-      summary("phoenix_solid_js_template.repo.query.query_time",
+      summary("phoenix_solidjs_template.repo.query.query_time",
         unit: {:native, :millisecond},
         description: "The time spent executing the query"
       ),
-      summary("phoenix_solid_js_template.repo.query.queue_time",
+      summary("phoenix_solidjs_template.repo.query.queue_time",
         unit: {:native, :millisecond},
         description: "The time spent waiting for a database connection"
       ),
-      summary("phoenix_solid_js_template.repo.query.idle_time",
+      summary("phoenix_solidjs_template.repo.query.idle_time",
         unit: {:native, :millisecond},
         description:
           "The time the connection spent waiting before being checked out for the query"

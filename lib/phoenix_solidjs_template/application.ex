@@ -5,7 +5,7 @@ defmodule PhoenixSolidJSTemplate.Application do
 
   use Application
 
-  @impl Application
+  @impl true
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
@@ -30,7 +30,7 @@ defmodule PhoenixSolidJSTemplate.Application do
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
-  @impl Application
+  @impl true
   def config_change(changed, _new, removed) do
     PhoenixSolidJSTemplateWeb.Endpoint.config_change(changed, removed)
     :ok
