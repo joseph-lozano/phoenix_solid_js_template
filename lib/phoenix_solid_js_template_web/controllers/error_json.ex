@@ -1,4 +1,4 @@
-defmodule SolidExWeb.ErrorJSON do
+defmodule PhoenixSolidJSTemplateWeb.ErrorJSON do
   # If you want to customize a particular status code,
   # you may add your own clauses, such as:
   #

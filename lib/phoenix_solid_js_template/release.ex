@@ -1,9 +1,9 @@
-defmodule SolidEx.Release do
+defmodule PhoenixSolidJSTemplate.Release do
   @moduledoc """
   Used for executing DB release tasks when run in production without Mix
   installed.
   """
-  @app :solid_ex
+  @app :phoenix_solid_js_template
 
   def migrate do
     load_app()

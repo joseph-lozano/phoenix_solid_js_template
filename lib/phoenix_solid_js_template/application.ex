@@ -1,4 +1,4 @@
-defmodule SolidEx.Application do
+defmodule PhoenixSolidJSTemplate.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,22 +9,22 @@ defmodule SolidEx.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      SolidExWeb.Telemetry,
+      PhoenixSolidJSTemplateWeb.Telemetry,
       # Start the Ecto repository
-      SolidEx.Repo,
+      PhoenixSolidJSTemplate.Repo,
       # Start the PubSub system
-      {Phoenix.PubSub, name: SolidEx.PubSub},
+      {Phoenix.PubSub, name: PhoenixSolidJSTemplate.PubSub},
       # Start Finch
-      {Finch, name: SolidEx.Finch},
+      {Finch, name: PhoenixSolidJSTemplate.Finch},
       # Start the Endpoint (http/https)
-      SolidExWeb.Endpoint
-      # Start a worker by calling: SolidEx.Worker.start_link(arg)
-      # {SolidEx.Worker, arg}
+      PhoenixSolidJSTemplateWeb.Endpoint
+      # Start a worker by calling: PhoenixSolidJSTemplate.Worker.start_link(arg)
+      # {PhoenixSolidJSTemplate.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: SolidEx.Supervisor]
+    opts = [strategy: :one_for_one, name: PhoenixSolidJSTemplate.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -32,7 +32,7 @@ defmodule SolidEx.Application do
   # whenever the application is updated.
   @impl Application
   def config_change(changed, _new, removed) do
-    SolidExWeb.Endpoint.config_change(changed, removed)
+    PhoenixSolidJSTemplateWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

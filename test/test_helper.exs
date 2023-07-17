@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(SolidEx.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(PhoenixSolidJSTemplate.Repo, :manual)

@@ -1,4 +1,4 @@
-# SolidEx Starter
+# Phoenix SolidJS Template
 
 This is a template for running a [SolidJS](https://solidjs.com) app with a Phoenix Backend.
 
@@ -20,4 +20,4 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Renaming your project
 
-Run `mix rename SolidEx YourNewName` to rename your project. You can then remove `{:rename_project, "~> 0.1.0", only: :dev}` from your `mix.exs` file.
+Run `mix rename PhoenixSolidJSTemplate YourNewName` to rename your project. You can then remove `{:rename_project, "~> 0.1.0", only: :dev}` from your `mix.exs` file.

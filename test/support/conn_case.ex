@@ -1,4 +1,4 @@
-defmodule SolidExWeb.ConnCase do
+defmodule PhoenixSolidJSTemplateWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule SolidExWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use SolidExWeb.ConnCase, async: true`, although
+  by setting `use PhoenixSolidJSTemplateWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -20,19 +20,19 @@ defmodule SolidExWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint SolidExWeb.Endpoint
+      @endpoint PhoenixSolidJSTemplateWeb.Endpoint
 
-      use SolidExWeb, :verified_routes
+      use PhoenixSolidJSTemplateWeb, :verified_routes
 
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import SolidExWeb.ConnCase
+      import PhoenixSolidJSTemplateWeb.ConnCase
     end
   end
 
   setup tags do
-    SolidEx.DataCase.setup_sandbox(tags)
+    PhoenixSolidJSTemplate.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end

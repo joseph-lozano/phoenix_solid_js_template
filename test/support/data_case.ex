@@ -1,4 +1,4 @@
-defmodule SolidEx.DataCase do
+defmodule PhoenixSolidJSTemplate.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule SolidEx.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use SolidEx.DataCase, async: true`, although
+  by setting `use PhoenixSolidJSTemplate.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,17 +18,17 @@ defmodule SolidEx.DataCase do
 
   using do
     quote do
-      alias SolidEx.Repo
+      alias PhoenixSolidJSTemplate.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import SolidEx.DataCase
+      import PhoenixSolidJSTemplate.DataCase
     end
   end
 
   setup tags do
-    SolidEx.DataCase.setup_sandbox(tags)
+    PhoenixSolidJSTemplate.DataCase.setup_sandbox(tags)
     :ok
   end
 
@@ -36,7 +36,11 @@ defmodule SolidEx.DataCase do
   Sets up the sandbox based on the test tags.
   """
   def setup_sandbox(tags) do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(SolidEx.Repo, shared: not tags[:async])
+    pid =
+      Ecto.Adapters.SQL.Sandbox.start_owner!(PhoenixSolidJSTemplate.Repo,
+        shared: not tags[:async]
+      )
+
     on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
   end
 
