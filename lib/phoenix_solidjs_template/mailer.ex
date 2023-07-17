@@ -1,3 +1,3 @@
 defmodule PhoenixSolidJSTemplate.Mailer do
-  use Swoosh.Mailer, otp_app: :phoenix_solidjs_template
+  use Swoosh.Mailer, otp_app: :phoenix_solid_js_template
 end

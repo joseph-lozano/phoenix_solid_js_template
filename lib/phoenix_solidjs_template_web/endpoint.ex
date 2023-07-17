@@ -1,12 +1,12 @@
 defmodule PhoenixSolidJSTemplateWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :phoenix_solidjs_template
+  use Phoenix.Endpoint, otp_app: :phoenix_solid_js_template
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_phoenix_solidjs_template_key",
+    key: "_phoenix_solid_js_template_key",
     signing_salt: "UjG5Foa5",
     same_site: "Lax"
   ]
@@ -19,7 +19,7 @@ defmodule PhoenixSolidJSTemplateWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :phoenix_solidjs_template,
+    from: :phoenix_solid_js_template,
     gzip: false,
     only: PhoenixSolidJSTemplateWeb.static_paths()
 
@@ -27,7 +27,7 @@ defmodule PhoenixSolidJSTemplateWeb.Endpoint do
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :phoenix_solidjs_template
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :phoenix_solid_js_template
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,

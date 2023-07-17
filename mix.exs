@@ -3,7 +3,7 @@ defmodule PhoenixSolidJSTemplate.MixProject do
 
   def project do
     [
-      app: :phoenix_solidjs_template,
+      app: :phoenix_solid_js_template,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),

@@ -52,23 +52,23 @@ defmodule PhoenixSolidJSTemplateWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("phoenix_solidjs_template.repo.query.total_time",
+      summary("phoenix_solid_js_template.repo.query.total_time",
         unit: {:native, :millisecond},
         description: "The sum of the other measurements"
       ),
-      summary("phoenix_solidjs_template.repo.query.decode_time",
+      summary("phoenix_solid_js_template.repo.query.decode_time",
         unit: {:native, :millisecond},
         description: "The time spent decoding the data received from the database"
       ),
-      summary("phoenix_solidjs_template.repo.query.query_time",
+      summary("phoenix_solid_js_template.repo.query.query_time",
         unit: {:native, :millisecond},
         description: "The time spent executing the query"
       ),
-      summary("phoenix_solidjs_template.repo.query.queue_time",
+      summary("phoenix_solid_js_template.repo.query.queue_time",
         unit: {:native, :millisecond},
         description: "The time spent waiting for a database connection"
       ),
-      summary("phoenix_solidjs_template.repo.query.idle_time",
+      summary("phoenix_solid_js_template.repo.query.idle_time",
         unit: {:native, :millisecond},
         description:
           "The time the connection spent waiting before being checked out for the query"
