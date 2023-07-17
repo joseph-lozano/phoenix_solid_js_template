@@ -20,4 +20,5 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Renaming your project
 
-Run `mix rename PhoenixSolidJSTemplate YourNewName` to rename your project. You can then remove `{:rename_project, "~> 0.1.0", only: :dev}` from your `mix.exs` file.
+Run `./rename.sh` to rename your project.
+You can then remove `{:rename_project, "~> 0.1.0", only: :dev}` from your `mix.exs` file, and delete the renaming script.
